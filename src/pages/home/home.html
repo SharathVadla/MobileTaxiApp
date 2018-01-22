@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div>
+  <ion-segment [(ngModel)]="triptype">
+    <ion-segment-button value="Local">
+      Local
+    </ion-segment-button>
+    <ion-segment-button value="OutStation">
+      OutStation
+    </ion-segment-button>
+    <ion-segment-button value="Package">
+      Packages
+    </ion-segment-button>
+    </ion-segment>
+</div>
+
+   <div #map id="map" style="height:85%">
+   <ion-list>
+  <ion-item>
+    <ion-icon ios="ios-pin" md="md-pin" item-start style="color:green;position: relative;left: 20px"></ion-icon>
+<ion-input (focus)="showFromAuto()" readonly [(ngModel)]="autocomplete.from" type="text" style="color:green" placeholder="From location"></ion-input>
+</ion-item>
+   </ion-list>
+<ion-list>
+  <ion-item style="margin-top:-16px ">
+    <ion-icon ios="ios-pin" md="md-pin" item-start style="color:red ;position: relative;left: 20px"></ion-icon>
+<ion-input (focus)="showToAuto()" readonly [(ngModel)]="autocomplete.to" type="text" placeholder="To location" style="color:red"></ion-input>
+
+</ion-item>
+</ion-list>
+
+ <div style=" width: 100%;  bottom: 0; right: 0; position: absolute;">
+   <ion-item>
+    <ion-scroll scrollX="true"   style="overflow: scroll; white-space: nowrap; height: 70px">
+      
+                   <a class="cc-selector" *ngFor="let p of vehiclelist;let i=index" >
+                               <!-- <input id="{{p.Type}}" type="radio" name="{{p.Type}}" value="{{p.Type}}" (click)="uncheck($event)" [(ngModel)]="test" *ngIf="$index==1?(p.Type):''" /> -->
+                               <input id="{{p.Type}}" type="radio" name="{{p.Type}}" value="{{p.Type}}"  [(ngModel)]="vehicledata"  />
+                               <label class="drinkcard-cc visa" for="{{p.Type}}">{{p.Type}}</label>      
+                   </a>     
+           </ion-scroll>
+   </ion-item>
+    </div>
+
+
+<div style="width: 30px; margin-right:40px; right: 0; position: absolute;bottom: 120px;" >
+        <button ion-button fab style="margin-bottom: 10px; margin-top: 10px;" (click)="getMyLocation()">
+          <ion-icon name="locate"></ion-icon>
+        </button>
+      </div>
+   </div>
+<ion-footer>
+  <ion-item style="height:10px;background: #488aff">
+    <ion-grid>
+        <ion-row>
+            <ion-col col-6>
+                <button ion-button block (click)="rideLater(vehicledata)">Ride Later</button>
+            </ion-col>
+            <ion-col col-6 >
+                <button ion-button block (click)="ridenow(vehicledata)">Ride Now</button>
+            </ion-col>           
+        </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-footer>
+
+
+ <!--<div style="position:absolute;bottom:0;width:100%;">
+      <ion-grid>
+        <ion-row no-padding no-margin>
+            <ion-col col-6 no-padding>
+                <button ion-button full (click)="rideLater(vehicledata)">Ride Later</button>
+            </ion-col>
+            <ion-col col-6 no-padding>
+                <button ion-button full (click)="ridenow(vehicledata)">Ride Now</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+ </div>-->
+
+  
+   
+ 
+</ion-content>

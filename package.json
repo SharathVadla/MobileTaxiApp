@@ -1,0 +1,83 @@
+{
+    "name": "Taxi App",
+    "version": "0.0.1",
+    "author": "Ionic Framework",
+    "homepage": "http://ionicframework.com/",
+    "private": true,
+    "scripts": {
+        "clean": "ionic-app-scripts clean",
+        "build": "ionic-app-scripts build",
+        "lint": "ionic-app-scripts lint",
+        "ionic:build": "ionic-app-scripts build",
+        "ionic:serve": "ionic-app-scripts serve"
+    },
+    "dependencies": {
+        "@angular/common": "4.1.3",
+        "@angular/compiler": "4.1.3",
+        "@angular/compiler-cli": "4.1.3",
+        "@angular/core": "4.1.3",
+        "@angular/forms": "4.1.3",
+        "@angular/http": "4.1.3",
+        "@angular/platform-browser": "4.1.3",
+        "@angular/platform-browser-dynamic": "4.1.3",
+        "@ionic-native/core": "3.10.2",
+        "@ionic-native/date-picker": "^4.3.1",
+        "@ionic-native/geolocation": "^3.12.1",
+        "@ionic-native/google-maps": "^4.3.1",
+        "@ionic-native/location-accuracy": "^4.3.2",
+        "@ionic-native/splash-screen": "3.10.2",
+        "@ionic-native/status-bar": "3.10.2",
+        "@ionic/storage": "2.0.1",
+        "cordova-android": "^6.3.0",
+        "cordova-plugin-add-swift-support": "^1.6.0",
+        "cordova-plugin-compat": "^1.2.0",
+        "cordova-plugin-console": "^1.1.0",
+        "cordova-plugin-datepicker": "^0.9.3",
+        "cordova-plugin-device": "^1.1.6",
+        "cordova-plugin-geofence": "^0.7.0",
+        "cordova-plugin-geolocation": "^2.4.3",
+        "cordova-plugin-googlemaps": "^2.0.11",
+        "cordova-plugin-request-location-accuracy": "^2.2.2",
+        "cordova-plugin-splashscreen": "^4.0.3",
+        "cordova-plugin-statusbar": "^2.2.3",
+        "cordova-plugin-whitelist": "^1.3.2",
+        "es6-promise-plugin": "^4.1.1",
+        "ionic-angular": "3.4.2",
+        "ionic-plugin-keyboard": "^2.2.1",
+        "ionicons": "3.0.0",
+        "jquery": "^3.2.1",
+        "ng2-signalr": "^2.1.1",
+        "rxjs": "5.4.0",
+        "signalr": "^2.2.2",
+        "sw-toolbox": "3.6.0",
+        "zone.js": "0.8.12"
+    },
+    "devDependencies": {
+        "@ionic/app-scripts": "1.3.7",
+        "@ionic/cli-plugin-cordova": "1.6.2",
+        "@ionic/cli-plugin-ionic-angular": "1.3.1",
+        "typescript": "2.3.3"
+    },
+    "description": "An Ionic project",
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-geofence": {},
+            "cordova-plugin-console": {},
+            "cordova-plugin-device": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-geolocation": {},
+            "cordova-plugin-datepicker": {},
+            "cordova-plugin-request-location-accuracy": {},
+            "cordova-plugin-googlemaps": {
+                "API_KEY_FOR_ANDROID": "AIzaSyCFlGA5vNNBzOHClPg11vm82ItO1DICC6E",
+                "API_KEY_FOR_IOS": "AIzaSyAnWi49NAj62PZzMO96qFSsSl8QjKLBNAo"
+            }
+        },
+        "platforms": [
+            "android"
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Taxi App",
+  "app_id": "5d68ad14",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
